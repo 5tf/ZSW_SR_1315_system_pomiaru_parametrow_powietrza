@@ -1,0 +1,1 @@
+# ZSW_SR_1315_system_pomiaru_parametrow_powietrza
