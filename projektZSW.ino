@@ -38,13 +38,27 @@ void loop()
   int wilgotnosc = dht.getHumidity();
   lcd.setCursor(4,0);
   lcd.print(wilgotnosc);
+  if(wilgotnosc > 40) {
+     lcd.setCursor(9,0);
+     lcd.print("!");
+  }
   Serial.println(wilgotnosc);
  
   //Odczyt temperatury
   int temperatura = dht.getTemperature();
   lcd.setCursor(4,1);
   lcd.print(temperatura);
+  if(temperatura > 21) {
+     lcd.setCursor(9,1);
+     lcd.print("!");
+  }
   Serial.println(temperatura);
  
+  //Odczyt ciśnienia
+  /*int cisnienie = dht.getPressure();
+  lcd.setCursor(8,0);
+  lcd.print(cisnienie);
+  Serial.println(cisnienie);*/
+  
   delay(1000);
 }
